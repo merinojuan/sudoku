@@ -6,10 +6,11 @@ import { Difficulty } from 'sudoku-gen/dist/types/difficulty.type';
 import { Theme, ThemeService } from './services/theme.service';
 import { Sudoku, SudokuCell, SudokuService } from './services/sudoku.service';
 import { FontSizePipe } from './pipes/font-size.pipe';
+import { DifficultyNamePipe } from './pipes/difficulty-name.pipe';
 
 @Component({
   selector: 'app-root',
-  imports: [FormsModule, CommonModule, FontSizePipe],
+  imports: [FormsModule, CommonModule, FontSizePipe, DifficultyNamePipe],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -17,6 +18,7 @@ export class AppComponent implements AfterViewInit {
   readonly themeService = inject(ThemeService);
   readonly sudokuService = inject(SudokuService);
 
+  selectedDifficulty = model<Difficulty>('easy');
   selectedInputValue = model<number | null>(null);
 
   @ViewChild('box') boxElement: ElementRef | undefined;
@@ -35,13 +37,17 @@ export class AppComponent implements AfterViewInit {
     if (this.height !== this.boxElement?.nativeElement.offsetWidth) this.height = this.boxElement?.nativeElement.offsetWidth;
   }
 
+  setDifficulty(difficulty: Difficulty) {
+    this.selectedDifficulty.set(difficulty);
+  }
+
   setTheme(theme: Theme) {
     this.themeService.setTheme(theme);
   }
 
-  getSudoku(difficulty: Difficulty) {
+  getSudoku() {
     if (this.selectedInputValue()) this.selectedInputValue.set(null);
-    this.history = [this.sudokuService.getSudoku(difficulty)];
+    this.history = [this.sudokuService.getSudoku(this.selectedDifficulty())];
   }
 
   resetSudoku() {
