@@ -1,11 +1,12 @@
 {
   "name": "Sudoku",
   "short_name": "Sudoku",
+  "description": "Juega al Sudoku, accesible desde cualquiera de tus dispositivos.",
   "theme_color": "#2f2f2f",
   "background_color": "#fafafa",
   "display": "standalone",
-  "scope": "./",
-  "start_url": "./",
+  "scope": "/",
+  "start_url": "/sudoku/?source=pwa",
   "icons": [
     {
       "src": "icons/icon-72x72.png",
