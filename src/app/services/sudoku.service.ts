@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, signal } from '@angular/core';
 import { getSudoku as getSudokuGen } from 'sudoku-gen';
 import { Sudoku as SudokuGen } from 'sudoku-gen/dist/types/sudoku.type';
 import { Difficulty } from 'sudoku-gen/dist/types/difficulty.type';
@@ -26,8 +26,31 @@ export type Sudoku = {
   providedIn: 'root'
 })
 export class SudokuService {
+  private readonly defaultDifficulty: Difficulty = 'easy';
+  private readonly currentDifficulty = signal<Difficulty>(this.defaultDifficulty);
 
-  constructor() { }
+  readonly difficulties: Difficulty[] = ['easy', 'medium', 'hard', 'expert'];
+
+  constructor() {
+    this.setDifficulty(this.getDifficultyFromLocalStorage());
+  }
+
+  getCurrentDifficulty() {
+    return this.currentDifficulty.asReadonly();
+  }
+
+  setDifficulty(difficulty: Difficulty) {
+    this.currentDifficulty.set(difficulty);
+    this.setDifficultyInLocalStorage(difficulty);
+  }
+
+  private setDifficultyInLocalStorage(difficulty: Difficulty) {
+    localStorage.setItem('difficulty', difficulty);
+  }
+
+  private getDifficultyFromLocalStorage() {
+    return localStorage.getItem('difficulty') as Difficulty ?? this.defaultDifficulty;
+  }
 
   getSudoku(difficulty: Difficulty) {
     const sudokuGen = getSudokuGen(difficulty) as SudokuGen;

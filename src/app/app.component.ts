@@ -1,4 +1,4 @@
-import { Component, inject, model, HostListener, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
+import { Component, inject, model, HostListener, AfterViewInit, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import clone from 'just-clone';
@@ -14,15 +14,16 @@ import { DifficultyNamePipe } from './pipes/difficulty-name.pipe';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent implements AfterViewInit {
+export class AppComponent implements AfterViewInit, OnInit {
   readonly themeService = inject(ThemeService);
   readonly sudokuService = inject(SudokuService);
 
-  selectedDifficulty = model<Difficulty>('easy');
   selectedInputValue = model<number | null>(null);
 
-  @ViewChild('box') boxElement: ElementRef | undefined;
   height = 0;
+  @ViewChild('box') boxElement: ElementRef | undefined;
+
+  @ViewChild('dropdownsBlur') dropdownsBlurElement: ElementRef | undefined;
 
   history: Sudoku[] = [];
 
@@ -32,22 +33,29 @@ export class AppComponent implements AfterViewInit {
     }, 0);
   }
 
+  ngOnInit() {
+    this.getSudoku();
+  }
+
   @HostListener('window:resize')
   onResize() {
     if (this.height !== this.boxElement?.nativeElement.offsetWidth) this.height = this.boxElement?.nativeElement.offsetWidth;
   }
 
-  setDifficulty(difficulty: Difficulty) {
-    this.selectedDifficulty.set(difficulty);
+  setTheme(theme: Theme) {
+    this.dropdownsBlurElement?.nativeElement.focus();
+    this.themeService.setTheme(theme);
   }
 
-  setTheme(theme: Theme) {
-    this.themeService.setTheme(theme);
+  setDifficulty(difficulty: Difficulty) {
+    this.dropdownsBlurElement?.nativeElement.focus();
+    this.sudokuService.setDifficulty(difficulty);
+    this.getSudoku();
   }
 
   getSudoku() {
     if (this.selectedInputValue()) this.selectedInputValue.set(null);
-    this.history = [this.sudokuService.getSudoku(this.selectedDifficulty())];
+    this.history = [this.sudokuService.getSudoku(this.sudokuService.getCurrentDifficulty()())];
   }
 
   resetSudoku() {
