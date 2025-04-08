@@ -3,7 +3,7 @@
   "short_name": "Sudoku",
   "description": "Juega al Sudoku, accesible desde cualquiera de tus dispositivos.",
   "theme_color": "#2f2f2f",
-  "background_color": "#fafafa",
+  "background_color": "#2f2f2f",
   "display": "standalone",
   "scope": "./",
   "start_url": "./",
