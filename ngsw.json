@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1744050149235,
+  "timestamp": 1744125935092,
   "index": "/sudoku/index.html",
   "assetGroups": [
     {
@@ -13,10 +13,10 @@
       "urls": [
         "/sudoku/favicon.svg",
         "/sudoku/index.html",
-        "/sudoku/main-O3XZPG7F.js",
+        "/sudoku/main-U6SRH5VB.js",
         "/sudoku/manifest.webmanifest",
         "/sudoku/polyfills-FFHMD2TL.js",
-        "/sudoku/styles-P2CZYLES.css"
+        "/sudoku/styles-YJSCGIX6.css"
       ],
       "patterns": []
     },
@@ -51,11 +51,11 @@
     "/sudoku/icons/icon-512x512.png": "0dec5f2e94bf3207f860c65286c98c32bd4e8e3e",
     "/sudoku/icons/icon-72x72.png": "d7dec75fb9be803b953612a5e8a99a36f4e09659",
     "/sudoku/icons/icon-96x96.png": "ac703dda868c523b11bb293b51e28d0f480f75dc",
-    "/sudoku/index.html": "faecf07fcc67484e45a76e428dd713608b00c41a",
-    "/sudoku/main-O3XZPG7F.js": "87fe6d303a5b254911cd0e68fb5460ca65bf5fc8",
+    "/sudoku/index.html": "219749f33b9b4f16718989af052cb68c723df24a",
+    "/sudoku/main-U6SRH5VB.js": "91f11dca462ffd18e5f15cca160e6fd53d2983d7",
     "/sudoku/manifest.webmanifest": "e9ed4bf3aefb7248fd6fd9926302dc68ba08c0c3",
     "/sudoku/polyfills-FFHMD2TL.js": "f49b49a155bc7d192db62a4c15d0a612b460a667",
-    "/sudoku/styles-P2CZYLES.css": "ca7b6e944326898ab8c9f612044b83c3b8688ec6"
+    "/sudoku/styles-YJSCGIX6.css": "ded1d2a234a5c5b2005cf6b0bb00a0da4e501271"
   },
   "navigationUrls": [
     {
