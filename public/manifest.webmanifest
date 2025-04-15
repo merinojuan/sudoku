@@ -5,8 +5,8 @@
   "theme_color": "#2f2f2f",
   "background_color": "#2f2f2f",
   "display": "standalone",
-  "scope": "./",
-  "start_url": "./",
+  "scope": "/sudoku/",
+  "start_url": "/sudoku/",
   "icons": [
     {
       "src": "icons/icon-72x72.png",
