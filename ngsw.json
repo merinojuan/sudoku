@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1744137488620,
+  "timestamp": 1744719777887,
   "index": "/sudoku/index.html",
   "assetGroups": [
     {
@@ -53,7 +53,7 @@
     "/sudoku/icons/icon-96x96.png": "ac703dda868c523b11bb293b51e28d0f480f75dc",
     "/sudoku/index.html": "219749f33b9b4f16718989af052cb68c723df24a",
     "/sudoku/main-U6SRH5VB.js": "91f11dca462ffd18e5f15cca160e6fd53d2983d7",
-    "/sudoku/manifest.webmanifest": "aa2bbc42443331f55871fd28bb8d975d591fd471",
+    "/sudoku/manifest.webmanifest": "87901c8853e6604e4739eaedef35442167b3dc34",
     "/sudoku/polyfills-FFHMD2TL.js": "f49b49a155bc7d192db62a4c15d0a612b460a667",
     "/sudoku/styles-YJSCGIX6.css": "ded1d2a234a5c5b2005cf6b0bb00a0da4e501271"
   },
