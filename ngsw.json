@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1744719777887,
+  "timestamp": 1744721518101,
   "index": "/sudoku/index.html",
   "assetGroups": [
     {
@@ -51,7 +51,7 @@
     "/sudoku/icons/icon-512x512.png": "0dec5f2e94bf3207f860c65286c98c32bd4e8e3e",
     "/sudoku/icons/icon-72x72.png": "d7dec75fb9be803b953612a5e8a99a36f4e09659",
     "/sudoku/icons/icon-96x96.png": "ac703dda868c523b11bb293b51e28d0f480f75dc",
-    "/sudoku/index.html": "219749f33b9b4f16718989af052cb68c723df24a",
+    "/sudoku/index.html": "8318574c0cdd550e0da13309aba0533d0460e7ea",
     "/sudoku/main-U6SRH5VB.js": "91f11dca462ffd18e5f15cca160e6fd53d2983d7",
     "/sudoku/manifest.webmanifest": "87901c8853e6604e4739eaedef35442167b3dc34",
     "/sudoku/polyfills-FFHMD2TL.js": "f49b49a155bc7d192db62a4c15d0a612b460a667",
