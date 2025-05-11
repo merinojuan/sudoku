@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1746912994340,
+  "timestamp": 1746997238282,
   "index": "/sudoku/index.html",
   "assetGroups": [
     {
@@ -28,36 +28,24 @@
         "ignoreVary": true
       },
       "urls": [
-        "/sudoku/icons/192-mask.png",
+        "/sudoku/apple-touch-icon.png",
+        "/sudoku/icons/192.png",
         "/sudoku/icons/512-mask.png",
-        "/sudoku/icons/icon-128x128.png",
-        "/sudoku/icons/icon-144x144.png",
-        "/sudoku/icons/icon-152x152.png",
-        "/sudoku/icons/icon-192x192.png",
-        "/sudoku/icons/icon-384x384.png",
-        "/sudoku/icons/icon-512x512.png",
-        "/sudoku/icons/icon-72x72.png",
-        "/sudoku/icons/icon-96x96.png"
+        "/sudoku/icons/512.png"
       ],
       "patterns": []
     }
   ],
   "dataGroups": [],
   "hashTable": {
-    "/sudoku/favicon.svg": "c9ff13b24d4755ca34abdc80b55e1e9563c40e3c",
-    "/sudoku/icons/192-mask.png": "73a9799e5413160a86ca9e8ed09da7f79da2430e",
+    "/sudoku/apple-touch-icon.png": "37a0e097491b27e4bf2f2d3d84e26aa3efba23a5",
+    "/sudoku/favicon.svg": "dd3775cc0894fd8b306d06aea63ee49e71778075",
+    "/sudoku/icons/192.png": "b3a7a702e579eafcc0e499c276e5b594061ed913",
     "/sudoku/icons/512-mask.png": "e067673ddebe0dbe40f519d87eea4415d4f0cd0e",
-    "/sudoku/icons/icon-128x128.png": "759ac1ec110bf573a12d83fca70db6afdeaaecb1",
-    "/sudoku/icons/icon-144x144.png": "18c27d608e12c4d5815d46acc1abe09aef5f0fe9",
-    "/sudoku/icons/icon-152x152.png": "78f08166cd37481988c469f4821ec8153e7da87f",
-    "/sudoku/icons/icon-192x192.png": "3fe1768c680e0a95f35e99566d93616716739972",
-    "/sudoku/icons/icon-384x384.png": "b5bcd9e4fa4d94f6bdaee579cc5de914a0d353cf",
-    "/sudoku/icons/icon-512x512.png": "0dec5f2e94bf3207f860c65286c98c32bd4e8e3e",
-    "/sudoku/icons/icon-72x72.png": "d7dec75fb9be803b953612a5e8a99a36f4e09659",
-    "/sudoku/icons/icon-96x96.png": "ac703dda868c523b11bb293b51e28d0f480f75dc",
-    "/sudoku/index.html": "219749f33b9b4f16718989af052cb68c723df24a",
+    "/sudoku/icons/512.png": "c9793333972b9cc36f656054928242c5f2c33891",
+    "/sudoku/index.html": "58738242c7e5bcb87ba67361df7e52a9cd8b2bf7",
     "/sudoku/main-U6SRH5VB.js": "91f11dca462ffd18e5f15cca160e6fd53d2983d7",
-    "/sudoku/manifest.webmanifest": "4948e14cb2d96dceac963da34b606b848ee3c77a",
+    "/sudoku/manifest.webmanifest": "673b32b4fef108e079c2aa436d0d42f48835f15b",
     "/sudoku/polyfills-FFHMD2TL.js": "f49b49a155bc7d192db62a4c15d0a612b460a667",
     "/sudoku/styles-YJSCGIX6.css": "ded1d2a234a5c5b2005cf6b0bb00a0da4e501271"
   },
