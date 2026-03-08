@@ -15,33 +15,5 @@
 <body>
   <app-root></app-root>
   <noscript>Habilite JavaScript para continuar utilizando esta aplicación.</noscript>
-  <script>
-    let installPrompt = null;
-    const installContainer = document.querySelector("#install-container");
-    const installButton = document.querySelector("#install-button");
-
-    window.addEventListener("appinstalled", () => {
-      disableInAppInstallPrompt();
-    });
-
-    window.addEventListener("beforeinstallprompt", (event) => {
-      event.preventDefault();
-      installPrompt = event;
-      installContainer.removeAttribute("hidden");
-    });
-
-    installButton.addEventListener("click", async () => {
-      if (!installPrompt) {
-        return;
-      }
-      const result = await installPrompt.prompt();
-      disableInAppInstallPrompt();
-    });
-
-    function disableInAppInstallPrompt() {
-      installPrompt = null;
-      installContainer.setAttribute("hidden", "");
-    }
-  </script>
 </body>
 </html>

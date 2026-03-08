@@ -5,6 +5,7 @@ import clone from 'just-clone';
 import { Difficulty } from 'sudoku-gen/dist/types/difficulty.type';
 import { Theme, ThemeService } from './services/theme.service';
 import { Sudoku, SudokuCell, SudokuService } from './services/sudoku.service';
+import { PwaService } from './services/pwa.service';
 import { DifficultyNamePipe } from './pipes/difficulty-name.pipe';
 
 @Component({
@@ -16,6 +17,7 @@ import { DifficultyNamePipe } from './pipes/difficulty-name.pipe';
 export class AppComponent implements OnInit {
   readonly themeService = inject(ThemeService);
   readonly sudokuService = inject(SudokuService);
+  public pwa = inject(PwaService);
 
   selectedInputValue = model<number | null>(null);
 
