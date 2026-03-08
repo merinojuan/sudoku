@@ -16,7 +16,7 @@
             "allowedCommonJsDependencies": [
               "sudoku-gen"
             ],
-            "outputPath": "dist/sudoku",
+            "outputPath": "dist",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
