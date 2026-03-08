@@ -1,45 +1,30 @@
-import { Component, inject, model, HostListener, AfterViewInit, OnInit, ElementRef, ViewChild } from '@angular/core';
+import { Component, inject, model, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import clone from 'just-clone';
 import { Difficulty } from 'sudoku-gen/dist/types/difficulty.type';
 import { Theme, ThemeService } from './services/theme.service';
 import { Sudoku, SudokuCell, SudokuService } from './services/sudoku.service';
-import { FontSizePipe } from './pipes/font-size.pipe';
 import { DifficultyNamePipe } from './pipes/difficulty-name.pipe';
 
 @Component({
   selector: 'app-root',
-  imports: [FormsModule, CommonModule, FontSizePipe, DifficultyNamePipe],
+  imports: [FormsModule, CommonModule, DifficultyNamePipe],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent implements AfterViewInit, OnInit {
+export class AppComponent implements OnInit {
   readonly themeService = inject(ThemeService);
   readonly sudokuService = inject(SudokuService);
 
   selectedInputValue = model<number | null>(null);
 
-  height = 0;
-  @ViewChild('box') boxElement: ElementRef | undefined;
-
   @ViewChild('dropdownsBlur') dropdownsBlurElement: ElementRef | undefined;
 
   history: Sudoku[] = [];
 
-  ngAfterViewInit(): void {
-    setTimeout(() => {
-      this.height = this.boxElement?.nativeElement.offsetWidth;
-    }, 0);
-  }
-
   ngOnInit() {
     this.getSudoku();
-  }
-
-  @HostListener('window:resize')
-  onResize() {
-    if (this.height !== this.boxElement?.nativeElement.offsetWidth) this.height = this.boxElement?.nativeElement.offsetWidth;
   }
 
   setTheme(theme: Theme) {
