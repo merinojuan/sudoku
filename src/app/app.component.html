@@ -152,39 +152,83 @@
             (contextmenu)="setValue(cell[0], cell[1], $event)"
           >
             @if (cell[1].isEditable) {
-              <span class="text-primary pointer-events-none fs-lg">{{cell[1].setedValue || ''}}</span>
+              <svg class="text-primary pointer-events-none" viewBox="0 0 100 100">
+                <text x="50" y="45" text-anchor="middle" dominant-baseline="central" font-size="75" style="fill:currentColor">
+                  {{cell[1].setedValue || ''}}
+                </text>
+              </svg>
             } @else {
-              <span class="pointer-events-none fs-lg">{{cell[1].value}}</span>
+              <svg class="pointer-events-none" viewBox="0 0 100 100">
+                <text x="50" y="45" text-anchor="middle" dominant-baseline="central" font-size="75" style="fill:currentColor">
+                  {{cell[1].value}}
+                </text>
+              </svg>
             }
           </div>
           @if (cell[1].value && !cell[1].setedValue && cell[1].possibleValues.length) {
-            <div class="sudoku-possible-values-container absolute grid grid-cols-3 w-full h-full pointer-events-none">
-              <div class="flex items-center justify-center fs-sm" [class.text-primary]="selectedInputValue() === 1">
-                <span [class.invisible]="!cell[1].possibleValues.includes(1)">1</span>
+            <div class="absolute grid grid-cols-3 w-full h-full pointer-events-none">
+              <div class="flex items-center justify-center" [class.text-primary]="selectedInputValue() === 1">
+                <svg [class.invisible]="!cell[1].possibleValues.includes(1)" viewBox="0 0 100 100">
+                  <text [class.opacity-25]="selectedInputValue() !== 1" x="50" y="45" text-anchor="middle" dominant-baseline="central" font-size="75" style="fill:currentColor">
+                    1
+                  </text>
+                </svg>
               </div>
-              <div class="flex items-center justify-center fs-sm" [class.text-primary]="selectedInputValue() === 2">
-                <span [class.invisible]="!cell[1].possibleValues.includes(2)">2</span>
+              <div class="flex items-center justify-center" [class.text-primary]="selectedInputValue() === 2">
+                <svg [class.invisible]="!cell[1].possibleValues.includes(2)" viewBox="0 0 100 100">
+                  <text [class.opacity-25]="selectedInputValue() !== 2" x="50" y="45" text-anchor="middle" dominant-baseline="central" font-size="75" style="fill:currentColor">
+                    2
+                  </text>
+                </svg>
               </div>
-              <div class="flex items-center justify-center fs-sm" [class.text-primary]="selectedInputValue() === 3">
-                <span [class.invisible]="!cell[1].possibleValues.includes(3)">3</span>
+              <div class="flex items-center justify-center" [class.text-primary]="selectedInputValue() === 3">
+                <svg [class.invisible]="!cell[1].possibleValues.includes(3)" viewBox="0 0 100 100">
+                  <text [class.opacity-25]="selectedInputValue() !== 3" x="50" y="45" text-anchor="middle" dominant-baseline="central" font-size="75" style="fill:currentColor">
+                    3
+                  </text>
+                </svg>
               </div>
-              <div class="flex items-center justify-center fs-sm" [class.text-primary]="selectedInputValue() === 4">
-                <span [class.invisible]="!cell[1].possibleValues.includes(4)">4</span>
+              <div class="flex items-center justify-center" [class.text-primary]="selectedInputValue() === 4">
+                <svg [class.invisible]="!cell[1].possibleValues.includes(4)" viewBox="0 0 100 100">
+                  <text [class.opacity-25]="selectedInputValue() !== 4" x="50" y="45" text-anchor="middle" dominant-baseline="central" font-size="75" style="fill:currentColor">
+                    4
+                  </text>
+                </svg>
               </div>
-              <div class="flex items-center justify-center fs-sm" [class.text-primary]="selectedInputValue() === 5">
-                <span [class.invisible]="!cell[1].possibleValues.includes(5)">5</span>
+              <div class="flex items-center justify-center" [class.text-primary]="selectedInputValue() === 5">
+                <svg [class.invisible]="!cell[1].possibleValues.includes(5)" viewBox="0 0 100 100">
+                  <text [class.opacity-25]="selectedInputValue() !== 5" x="50" y="45" text-anchor="middle" dominant-baseline="central" font-size="75" style="fill:currentColor">
+                    5
+                  </text>
+                </svg>
               </div>
-              <div class="flex items-center justify-center fs-sm" [class.text-primary]="selectedInputValue() === 6">
-                <span [class.invisible]="!cell[1].possibleValues.includes(6)">6</span>
+              <div class="flex items-center justify-center" [class.text-primary]="selectedInputValue() === 6">
+                <svg [class.invisible]="!cell[1].possibleValues.includes(6)" viewBox="0 0 100 100">
+                  <text [class.opacity-25]="selectedInputValue() !== 6" x="50" y="45" text-anchor="middle" dominant-baseline="central" font-size="75" style="fill:currentColor">
+                    6
+                  </text>
+                </svg>
               </div>
-              <div class="flex items-center justify-center fs-sm" [class.text-primary]="selectedInputValue() === 7">
-                <span [class.invisible]="!cell[1].possibleValues.includes(7)">7</span>
+              <div class="flex items-center justify-center" [class.text-primary]="selectedInputValue() === 7">
+                <svg [class.invisible]="!cell[1].possibleValues.includes(7)" viewBox="0 0 100 100">
+                  <text [class.opacity-25]="selectedInputValue() !== 7" x="50" y="45" text-anchor="middle" dominant-baseline="central" font-size="75" style="fill:currentColor">
+                    7
+                  </text>
+                </svg>
               </div>
-              <div class="flex items-center justify-center fs-sm" [class.text-primary]="selectedInputValue() === 8">
-                <span [class.invisible]="!cell[1].possibleValues.includes(8)">8</span>
+              <div class="flex items-center justify-center" [class.text-primary]="selectedInputValue() === 8">
+                <svg [class.invisible]="!cell[1].possibleValues.includes(8)" viewBox="0 0 100 100">
+                  <text [class.opacity-25]="selectedInputValue() !== 8" x="50" y="45" text-anchor="middle" dominant-baseline="central" font-size="75" style="fill:currentColor">
+                    8
+                  </text>
+                </svg>
               </div>
-              <div class="flex items-center justify-center fs-sm" [class.text-primary]="selectedInputValue() === 9">
-                <span [class.invisible]="!cell[1].possibleValues.includes(9)">9</span>
+              <div class="flex items-center justify-center" [class.text-primary]="selectedInputValue() === 9">
+                <svg [class.invisible]="!cell[1].possibleValues.includes(9)" viewBox="0 0 100 100">
+                  <text [class.opacity-25]="selectedInputValue() !== 9" x="50" y="45" text-anchor="middle" dominant-baseline="central" font-size="75" style="fill:currentColor">
+                    9
+                  </text>
+                </svg>
               </div>
             </div>
           }
