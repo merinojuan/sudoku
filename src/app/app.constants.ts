@@ -30,7 +30,7 @@ export const cells: [number, number[], string][] = [
   [27, [7, 8, 9, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 36, 45, 54, 63, 72, 81], 'border-b-2 border-primary'],
   [28, [1, 10, 19, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 46, 47, 48, 55, 64, 73], 'border-r border-b border-primary/30'],
   [29, [2, 11, 20, 28, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 46, 47, 48, 56, 65, 74], 'border-r border-b border-primary/30'],
-  [30, [3, 12, 21, 28, 29, 31, 32, 33, 34, 35, 36, 37, 38, 39, 46, 47, 48, 50, 57, 66, 75], 'border-r-2 border-b border-primary/30 border-r-primary'],
+  [30, [3, 12, 21, 28, 29, 31, 32, 33, 34, 35, 36, 37, 38, 39, 46, 47, 48, 57, 66, 75], 'border-r-2 border-b border-primary/30 border-r-primary'],
   [31, [4, 13, 22, 28, 29, 30, 32, 33, 34, 35, 36, 40, 41, 42, 49, 50, 51, 58, 67, 76], 'border-r border-b border-primary/30'],
   [32, [5, 14, 23, 28, 29, 30, 31, 33, 34, 35, 36, 40, 41, 42, 49, 50, 51, 59, 68, 77], 'border-r border-b border-primary/30'],
   [33, [6, 15, 24, 28, 29, 30, 31, 32, 34, 35, 36, 40, 41, 42, 49, 50, 51, 60, 69, 78], 'border-r-2 border-b border-primary/30 border-r-primary'],
